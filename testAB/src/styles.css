@@ -1,0 +1,106 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.custom-select {
+  width: 357px;
+  height: 300px;
+  font-size: 13px;
+}
+
+.selected-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #e4e6e5;
+  outline: none;
+  cursor: pointer;
+}
+
+.selected-option::after {
+  content: "❯";
+  position: absolute;
+  right: 10px;
+  color: #000;
+  vertical-align: middle;
+  transform: rotate(90deg);
+}
+
+.selected-option > span {
+  width: 95%;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.options {
+  overflow-y: scroll;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 160px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 11px rgba(0, 0, 0, 0.1);
+}
+
+.options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  min-height: 60px;
+  background-color: #9f9f9f;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+.options::-webkit-scrollbar-track {
+  margin-top: 3px;
+  padding-right: 3px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  list-style-type: none;
+}
+
+.option > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.option:hover {
+  background-color: #e4eaff;
+  cursor: pointer;
+}
+
+.option::focus {
+  border: 2px solid #4971ff;
+  background-color: #ffffff;
+}
+
+.stubIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4971ff;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  color: #ffffff;
+  font-size: 9px;
+}
+
+.select-open {
+  border: 1px solid #4971ff;
+}
