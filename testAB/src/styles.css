@@ -19,6 +19,8 @@
   box-shadow: 1px 1px 10px #e4e6e5;
   outline: none;
   cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
 }
 
 .selected-option::after {
